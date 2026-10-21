@@ -1,0 +1,24 @@
+
+{
+  "version": 1,
+  "author": "Kristen Mauricio",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -60.6, "left": -26, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 173.4, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -51.6, "left": 119, "attrs": { "color": "blue" } },
+    { "type": "wokwi-led", "id": "led2", "top": -51.6, "left": 80.6, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "led2:A", "bb1:12t.a", "", [ "$bb" ] ],
+    [ "led2:C", "bb1:11t.a", "", [ "$bb" ] ],
+    [ "led1:A", "uno:11", "blue", [ "v0" ] ],
+    [ "led2:A", "uno:12", "red", [ "v0" ] ],
+    [ "led1:A", "bb1:16t.a", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:15t.a", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:bp.12", "green", [ "v0" ] ],
+    [ "led2:C", "bb1:bp.9", "green", [ "v0" ] ],
+    [ "uno:GND.1", "bb1:bp.7", "black", [ "v0", "h-38.1" ] ]
+  ],
+  "dependencies": {}
+}
